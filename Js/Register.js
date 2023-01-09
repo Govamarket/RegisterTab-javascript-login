@@ -118,18 +118,24 @@ const passwordInputValidation = () => {
 
 
  buttonSubmit.addEventListener("click", (event) => {
-    validateUserName();
-    emailInputValidation();
-    passwordInputValidation();
-    passwordConfirmValidation();
+
+  if (usernameInput.value == "" ||emailInput.value == "" || passwordInput.value == "" || passwordConfirm.value == "") {
+    alert("No input should be empty");
+  }else{
+    // Storing the data in localstorage
+    localStorage.setItem("username", JSON.stringify(usernameInput.value));
+    localStorage.setItem("userEmail", JSON.stringify(emailInput.value));
+    localStorage.setItem("userPassword", JSON.stringify(passwordInput.value));
+    localStorage.setItem("confirm", JSON.stringify(passwordConfirm.value));
+    alert('Kindly verif from the login page');
+      window.location.href = "http://127.0.0.1:5500/Pages/login.html";
+  }
+    // validateUserName();
+    // emailInputValidation();
+    // passwordInputValidation();
+    // passwordConfirmValidation();
  
-// Storing the data in localstorage
-      localStorage.setItem("username", JSON.stringify(usernameInput.value));
-      localStorage.setItem("userEmail", JSON.stringify(emailInput.value));
-      localStorage.setItem("userPassword", JSON.stringify(passwordInput.value));
-      localStorage.setItem("confirm", JSON.stringify(passwordConfirm.value));
-      alert('Kindly verif from the login page');
-        window.location.href = "http://127.0.0.1:5500/Pages/login.html";
+
         
 });
 

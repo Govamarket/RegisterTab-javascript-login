@@ -11,10 +11,10 @@ const emptyPsw = document.getElementById('emptyPsw');
 const pswNotmatch = document.getElementById('notmatchPsw');
 
 // Targeting the local storage to implement the login page
-const checkRegisteredMail = localStorage.getItem('userEmail');
-const checkRegisteredMailConfirm = localStorage.getItem('userPassword');
+const checkRegisteredMail = JSON.parse(localStorage.getItem('userEmail'));
+const checkRegisteredMailConfirm = JSON.parse(localStorage.getItem('userPassword'));
 
-const emailValid = () => {
+const emailValid =() => {
   if (inputMail.value == "") {
     emptyInput.innerHTML = 'please enter your email';
     emptyInput.style.visibility = 'visible';
@@ -24,12 +24,11 @@ const emailValid = () => {
     notmatch.style.visibility = 'visible';
     emptyInput.style.visibility = 'hidden';
   }else if (inputMail.value === checkRegisteredMail) {
-    mAtch.innerHTML = 'correct';
-    mAtch.style.visibility = 'visible';
     notmatch.style.visibility = 'hidden';
     emptyInput.style.visibility = 'hidden';
   }
 }
+
 // Password validation
 const passwordValid = () => {
   if (inputPsw.value === '') { 
@@ -45,14 +44,15 @@ const passwordValid = () => {
   }
 }
 
-const validateAll = () => {
-  if (inputMail.value === checkRegisteredMail || inputPsw.value === checkRegisteredMailConfirm) {
-      alert('login successful');
-  }
-}
 
 buttonSubmit.addEventListener('click',(event) => {
-  emailValid();
-  passwordValid();
-  validateAll();
+ if (!inputMail.value.match(checkRegisteredMail) || !inputPsw.value.match(checkRegisteredMailConfirm)) {
+    alert("Incorrect login details");
+ }else{
+  alert("Alert successfully login");
+  window.location.href = "https://sports.bet9ja.com/"
+}
+
+emailValid();
+passwordValid();
 })
