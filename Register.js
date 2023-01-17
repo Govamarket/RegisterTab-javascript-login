@@ -126,6 +126,7 @@ const passwordConfirmValidation = () => {
     passwordInputValidation();
     passwordConfirmValidation();
   }else{
+    errorIcon.style.visibility = "hidden";
     // Storing the data in localstorage
     localStorage.setItem("username", JSON.stringify(usernameInput.value));
     localStorage.setItem("userEmail", JSON.stringify(emailInput.value));

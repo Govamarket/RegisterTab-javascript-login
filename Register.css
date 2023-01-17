@@ -45,7 +45,7 @@ form{
 #head{
     /* font-family: Arial, Helvetica, sans-serif; */
     text-align: center;
-    padding-top: 2px;
+    padding-top: 1rem;
 }
 
 #emptyusername, #lessthanusername, #emptymail, #emptypsw, #lessthanpassword, #emptyconfirm, #notmatch, #validmail{
