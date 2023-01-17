@@ -49,7 +49,7 @@ buttonSubmit.addEventListener('click',(event) => {
  if (!inputMail.value.match(checkRegisteredMail) || !inputPsw.value.match(checkRegisteredMailConfirm)) {
     alert("Incorrect login details");
  }else{
-  alert("Alert successfully login");
+  alert("successfully login");
   window.location.href = "https://sports.bet9ja.com/"
 }
 

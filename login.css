@@ -3,16 +3,22 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
 
 .container{
     margin-left: auto;
     margin-right: auto;
-    width: 23rem;
+    width: 20rem;
     margin-top: 5rem;
     padding-top: 2rem;
     line-height: 1rem;
     background-color: white;
-    box-shadow: 1px 1px 5px 5px rgb(240, 237, 237);
+    box-shadow: 1px 1px 5px 5px rgb(225, 222, 222);
     padding-bottom: 1rem;
     border-radius: 5px;
    

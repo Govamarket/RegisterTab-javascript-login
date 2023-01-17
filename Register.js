@@ -1,21 +1,21 @@
-const usernameInput = document.getElementById("username");
-const emailInput = document.getElementById("userEmail");
-const passwordInput = document.getElementById("userPassword");
-const passwordConfirm = document.getElementById("confirm");
-const formInput = document.getElementById("form");
-const buttonSubmit = document.getElementById("submit");
-const validRegex =
-  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-
-//  Targeting messages the error message hova here.
-    const emptyUserName = document.getElementById("emptyUserName");
-    const lessthanusername = document.getElementById("lessthanusername");
-    const emptymail = document.getElementById("emptymail");
-    const validmail = document.getElementById("validmail");
-    const emptypswd = document.getElementById("emptypswd");
-    const lessthanpassword = document.getElementById("lessthanpassword");
-    const emptyconfirm = document.getElementById("emptyconfirm");
-    const notmatch = document.getElementById("notmatch");
+ const usernameInput = document.getElementById("username");
+ const emailInput = document.getElementById("userEmail");
+ const passwordInput = document.getElementById("userPassword");
+ const passwordConfirm = document.getElementById("confirm");
+ const formInput = document.getElementById("form");
+ const buttonSubmit = document.getElementById("submit");
+ const validRegex =
+   /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+ 
+ //  Targeting messages the error message hova here.
+ const emptyUserName = document.getElementById("emptyUserName");
+ const lessthanusername = document.getElementById("lessthanusername");
+ const emptymail = document.getElementById("emptymail");
+ const validmail = document.getElementById("validmail");
+ const emptypswd = document.getElementById("emptypswd");
+ const lessthanpassword = document.getElementById("lessthanpassword");
+ const emptyconfirm = document.getElementById("emptyconfirm");
+ const notmatch = document.getElementById("notmatch");
 
     // Generalized the all Inputs (validate during submission)
     // Validation of all fields
@@ -42,6 +42,7 @@ passwordConfirm.addEventListener("change", (event) => {
     passwordConfirmValidation();
   }, 3000);
 });
+
 
 // // Whole funtion
 const validateUserName = () => {
@@ -95,7 +96,7 @@ const passwordInputValidation = () => {
   
   }
 
-  const passwordConfirmValidation = () => {
+const passwordConfirmValidation = () => {
     if (passwordConfirm.value == "") {
       emptyconfirm.innerHTML = "Please enter your password";
       emptyconfirm.style.visibility="visible";
@@ -114,13 +115,14 @@ const passwordInputValidation = () => {
   
   }
   
-  
-
-
  buttonSubmit.addEventListener("click", (event) => {
 
   if (usernameInput.value == "" ||emailInput.value == "" || passwordInput.value == "" || passwordConfirm.value == "") {
     alert("No input should be empty");
+    validateUserName();
+    emailInputValidation();
+    passwordInputValidation();
+    passwordConfirmValidation();
   }else{
     // Storing the data in localstorage
     localStorage.setItem("username", JSON.stringify(usernameInput.value));
@@ -128,14 +130,8 @@ const passwordInputValidation = () => {
     localStorage.setItem("userPassword", JSON.stringify(passwordInput.value));
     localStorage.setItem("confirm", JSON.stringify(passwordConfirm.value));
     alert('Kindly verif from the login page');
-      window.location.href = "http://127.0.0.1:5500/Pages/login.html";
+      window.location.href = "login.html";
   }
-    // validateUserName();
-    // emailInputValidation();
-    // passwordInputValidation();
-    // passwordConfirmValidation();
- 
-
         
 });
 
