@@ -3,6 +3,7 @@
  const passwordInput = document.getElementById("userPassword");
  const passwordConfirm = document.getElementById("confirm");
  const formInput = document.getElementById("form");
+ const iconPath = document.querySelector(".fa-sharp");
  const buttonSubmit = document.getElementById("submit");
  const validRegex =
    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -16,6 +17,7 @@
  const lessthanpassword = document.getElementById("lessthanpassword");
  const emptyconfirm = document.getElementById("emptyconfirm");
  const notmatch = document.getElementById("notmatch");
+ const errorIcon = document.querySelector(".fa-sharp");
 
     // Generalized the all Inputs (validate during submission)
     // Validation of all fields
@@ -118,7 +120,7 @@ const passwordConfirmValidation = () => {
  buttonSubmit.addEventListener("click", (event) => {
 
   if (usernameInput.value == "" ||emailInput.value == "" || passwordInput.value == "" || passwordConfirm.value == "") {
-    alert("No input should be empty");
+    errorIcon.style.visibility = "visible";
     validateUserName();
     emailInputValidation();
     passwordInputValidation();

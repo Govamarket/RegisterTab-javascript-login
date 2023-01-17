@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto&family=Sora:wght@500&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Sora', sans-serif;
 }
 body{
     display: flex;
@@ -15,12 +17,11 @@ body{
     margin-right: auto;
     width: 20rem;
     margin-top: 5rem;
-    padding-top: 2rem;
-    line-height: 1rem;
     background-color: white;
     box-shadow: 1px 1px 5px 5px rgb(225, 222, 222);
     padding-bottom: 1rem;
     border-radius: 5px;
+    position: relative;;
    
 }
 
@@ -42,7 +43,6 @@ body{
 }
 
 form{
-    margin-top: 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
     line-height: 1.60rem;
@@ -55,11 +55,16 @@ input{
     border-radius: 5px;
     border: 1px solid rgb(185, 181, 181);
    text-align: center;
+   font-family: 'Sora', sans-serif;
+}
+label{
+    font-size: 14px;
+    color: rgb(88, 90, 93);
 }
 
 #header{
     text-align: center;
-    /* font-size: 13px; */
+    font-family: 'Sora', sans-serif;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -70,8 +75,23 @@ input{
 #notmatch, #empty, #emptyPsw, #notmatchPsw{
     visibility: hidden;
     color: red;
+    position: absolute;
+    font-size: 15px;
 }
 #match{
     color: green;
     visibility: hidden;
 }
+
+.fa-sharp{
+    display: flex;
+    justify-content: center;
+    padding-top: 3px;
+    font-size: 1rem;
+    color: red;
+    visibility: hidden;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 1rem;
+}
+

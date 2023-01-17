@@ -4,7 +4,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Sora', sans-serif;
+
 }
 body{
     display: flex;
@@ -19,11 +20,12 @@ body{
     width: 20rem;
     background-color: white;
     box-shadow: 2px 2px 10px 2px rgb(176, 173, 173);
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
     margin-top: 1rem;
-    padding: 1.5rem;
-    line-height: 1.20rem;
+    padding: 1.3rem;
+    line-height: 1.3rem;
     border-radius: 10px;
+    letter-spacing: 0px;
 }
 
 
@@ -33,25 +35,38 @@ input{
     border: rgb(226, 229, 236) 1px solid;
     border-radius: 6px;
     padding-left: 1rem;
+    font-family: 'Poppins', sans-serif;
 }
 form{
     margin-left: 1rem;
     margin-right: 1rem;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
 }
 #head{
     /* font-family: Arial, Helvetica, sans-serif; */
     text-align: center;
-    padding-top: 4px;
+    padding-top: 2px;
 }
 
 #emptyusername, #lessthanusername, #emptymail, #emptypsw, #lessthanpassword, #emptyconfirm, #notmatch, #validmail{
-    /* display: none; */
     color: red;
-    font-family: monospace;
-    font-size: 14px;
+    font-family: 'Sora', sans-serif;
+    font-size: 10px;
     visibility: hidden;
+    position: absolute;
 }
+.fa-sharp{
+    display: flex;
+    justify-content: center;
+    padding-top: 3px;
+    font-size: 1rem;
+    color: red;
+    visibility: hidden;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+
+
 #btn{
     display: flex;
     justify-content: center;
@@ -60,7 +75,7 @@ form{
 
 button{
     width: 20rem;
-    padding: 1rem;
+    padding: 0.4rem;
     outline: none;
     border: 0;
     color: white;
@@ -68,11 +83,15 @@ button{
     border-radius: 5px;
     cursor: pointer;
     font-size: 17px;
+    margin-top: 1rem;
+    
 }
 
 label{
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(143, 144, 146);
+    color: rgb(74, 73, 73);
+    font-family: 'Poppins', sans-serif;
+    
 }
 
 

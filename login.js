@@ -1,5 +1,6 @@
 const inputMail = document.getElementById("email");
 const inputPsw = document.getElementById("password");
+const iconPath = document.querySelector(".fa-sharp");
 const buttonSubmit = document.getElementById("btn");
 
 // Targeting error messages
@@ -9,6 +10,7 @@ const mAtch = document.getElementById('match');
 // password error messages
 const emptyPsw = document.getElementById('emptyPsw');
 const pswNotmatch = document.getElementById('notmatchPsw');
+const errorIcon = document.querySelector(".fa-sharp");
 
 // Targeting the local storage to implement the login page
 const checkRegisteredMail = JSON.parse(localStorage.getItem('userEmail'));
@@ -47,6 +49,7 @@ const passwordValid = () => {
 
 buttonSubmit.addEventListener('click',(event) => {
  if (!inputMail.value.match(checkRegisteredMail) || !inputPsw.value.match(checkRegisteredMailConfirm)) {
+  errorIcon.style.visibility = "visible";
     alert("Incorrect login details");
  }else{
   alert("successfully login");
