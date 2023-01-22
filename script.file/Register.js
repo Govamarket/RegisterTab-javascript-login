@@ -1,3 +1,6 @@
+ 
+ 
+ 
  const usernameInput = document.getElementById("username");
  const emailInput = document.getElementById("userEmail");
  const passwordInput = document.getElementById("userPassword");
