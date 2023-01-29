@@ -135,7 +135,7 @@ const passwordConfirmValidation = () => {
     localStorage.setItem("userPassword", JSON.stringify(passwordInput.value));
     localStorage.setItem("confirm", JSON.stringify(passwordConfirm.value));
     alert('Kindly verif from the login page');
-      window.location.href = "login.html";
+      window.location.href = "http://127.0.0.1:5500/index/login.html";
   }
         
 });
