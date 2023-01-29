@@ -1,4 +1,6 @@
- const usernameInput = document.getElementById("username");
+
+
+const usernameInput = document.getElementById("username");
  const emailInput = document.getElementById("userEmail");
  const passwordInput = document.getElementById("userPassword");
  const passwordConfirm = document.getElementById("confirm");
@@ -8,7 +10,7 @@
  const validRegex =
    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
  
- //  Targeting messages the error message hova here.
+  // Targeting messages the error message hova here.
  const emptyUserName = document.getElementById("emptyUserName");
  const lessthanusername = document.getElementById("lessthanusername");
  const emptymail = document.getElementById("emptymail");
@@ -133,7 +135,7 @@ const passwordConfirmValidation = () => {
     localStorage.setItem("userPassword", JSON.stringify(passwordInput.value));
     localStorage.setItem("confirm", JSON.stringify(passwordConfirm.value));
     alert('Kindly verif from the login page');
-      window.location.href = "http://127.0.0.1:5500/index/login.html";
+      window.location.href = "http://127.0.0.1:5500/login.html";
   }
         
 });
