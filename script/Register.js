@@ -16,7 +16,7 @@ import {
   emptyconfirm,
   notmatch,
   errorIcon,
- } from "./variables";
+ } from "./variables.js";
 
 
 
